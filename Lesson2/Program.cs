@@ -116,7 +116,7 @@ namespace Lesson2
             int summ = Classes.NumberCount(int.Parse(Console.ReadLine()));
             Classes.PrintLeft("Количество цифр числа: " + summ, false, ConsoleColor.Yellow);
         }
-        static void Task3() //Подсчитать сумму всех нечетных положительных чисел
+        static void Task3() //Подсчитать сумму всех нечетных положительных чисел 
         {
             Classes.LogoLesson("2");
             Classes.PrintCenter("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█", ConsoleColor.White);
