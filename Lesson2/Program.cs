@@ -86,7 +86,7 @@ namespace Lesson2
             }
         }
 
-        static void Task1() //Минимальное из трех чисел 
+        static void Task1() // Минимальное из трех чисел 
 
         {
             Classes.LogoLesson("2");            
