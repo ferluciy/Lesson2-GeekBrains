@@ -215,10 +215,12 @@ namespace Lesson2
                     countgoodnubmer++;
                     progress = ((double) i / maxnumber)*100;
                    if ( progress % 1 == 0 && i > 1)
-                  {                       
-                       Classes.PrintLeft(String.Format("Прогресс: {0:F0}%",progress), true, ConsoleColor.Yellow);
+                  {
+                        Console.CursorLeft = 19; 
+                        Classes.PrintLeft(String.Format("Прогресс: {0:F0}%",progress), true, ConsoleColor.Yellow);                       
                   }
                 }
+            Console.CursorLeft = 19;
             Classes.PrintLeft("Прогресс: 100%", true, ConsoleColor.Green);
             Console.WriteLine("");
             Classes.PrintLeft("В 1 000 000 000 всего «хороших» чисел: "+ countgoodnubmer, false, ConsoleColor.Green);

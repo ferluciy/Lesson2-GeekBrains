@@ -22,7 +22,8 @@ namespace GBcool
         }
         public static void PrintLeft(string s, bool InLine, ConsoleColor foregroundcolor) //вывод текста по левому краю с отступом
         {
-            Console.SetCursorPosition(20, Console.CursorTop);
+            if (Console.CursorLeft<20) Console.SetCursorPosition(20, Console.CursorTop);
+            else Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop);
             Console.ForegroundColor = foregroundcolor;
             if (InLine) Console.Write(s); else Console.WriteLine(s);
         }
@@ -87,7 +88,7 @@ namespace GBcool
         {
             if (a < b)
             {
-                PrintLeft(a.ToString(), false, ConsoleColor.White);
+                PrintLeft(a.ToString()+"\t", true, ConsoleColor.White);
                 a++;                
                 RecursiaOne(a,b);
             }            
