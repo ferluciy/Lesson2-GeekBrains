@@ -116,7 +116,7 @@ namespace Lesson2
             int summ = Classes.NumberCount(int.Parse(Console.ReadLine()));
             Classes.PrintLeft("Количество цифр числа: " + summ, false, ConsoleColor.Yellow);
         }
-        static void Task3() //Подсчитать сумму всех нечетных положительных чисел s
+        static void Task3() //Подсчитать сумму всех нечетных положительных чисел
         {
             Classes.LogoLesson("2");
             Classes.PrintCenter("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█", ConsoleColor.White);
@@ -194,8 +194,8 @@ namespace Lesson2
             double index = Math.Round(Classes.IndexMassa(m, h),1);
             Classes.PrintLeft(String.Format($"Ваш индекс массы тела: {index}"), false, ConsoleColor.Yellow);
             if (index >= 18.5 && index <= 24) Classes.PrintLeft("Вы в идеальной форме", false, ConsoleColor.Green);
-            else if (index < 18.5) Classes.PrintLeft(String.Format("Недостаточная масса тела. Вам нужно набрать {0:F1} кг", (m / index) * (18.5 - index)), false, ConsoleColor.Yellow);
-            else Classes.PrintLeft(String.Format("ЖИРОБАСИНА!!! Вам нужно сбросить {0:F1} кг", (m / index) * (index - 24)), false, ConsoleColor.Red);
+            else if (index < 18.5) Classes.PrintLeft(String.Format("Недостаточная масса тела. Вам нужно набрать {0:F1} кг", ((18.5 * (Math.Pow(h / 100, 2))) - m)), false, ConsoleColor.Yellow);
+            else Classes.PrintLeft(String.Format("ЖИРОБАСИНА!!! Вам нужно сбросить {0:F1} кг", m - (24 * (Math.Pow(h / 100, 2)))), false, ConsoleColor.Red);
         }
         static void Task6() // Количество «хороших» чисел в 1 000 000 000
         {
