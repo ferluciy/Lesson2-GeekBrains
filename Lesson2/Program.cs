@@ -101,8 +101,7 @@ namespace Lesson2
             Classes.PrintLeft("Введи третье число: ", true, ConsoleColor.White);
             int c = int.Parse(Console.ReadLine());
             Console.WriteLine("");
-            int mindig = a < b ? a : b;
-            mindig = mindig < c ? mindig : c;
+            int mindig = a < b ? (a < c ? a : c) : b;
             Classes.PrintLeft("Минимальное число: " + mindig, false, ConsoleColor.Yellow);
         }
         static void Task2() // Подсчет количества цифр числа 
